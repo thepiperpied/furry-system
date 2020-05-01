@@ -13,14 +13,15 @@
 
   <script type="module">
     import { html, render } from 'lit-html';
-    import '../furry-system.js';
+    import '../src/atom/layout/layout.js';
 
     const title = 'Hello owc World!';
     render(
       html`
-        <furry-system .title=${title}>
-          some more light-dom
-        </furry-system>
+        <fs-layout title="Lawda">
+          <h1 slot="a"> slot a</h1>
+          <h1 slot="b"> slot b</h1>
+        </fs-layout>
       `,
       document.querySelector('#demo')
     );
